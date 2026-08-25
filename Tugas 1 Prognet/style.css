@@ -1,0 +1,280 @@
+:root {
+  --bg: #efe9db;
+  --paper: #fffdf8;
+  --text: #26241f;
+  --muted: #746c5c;
+  --navy: #1c3454;
+  --navy-soft: #33507a;
+  --gold: #a9791f;
+  --gold-soft: #d3b876;
+  --line: #e1d8c1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 60px 68px 56px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 40px 80px -40px rgba(28, 52, 84, 0.35);
+  color: var(--text);
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+
+header table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+header td {
+  padding: 0;
+  vertical-align: top;
+}
+
+header td:first-child {
+  padding-right: 28px;
+}
+
+header img {
+  display: block;
+  width: 130px;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 10px 24px -10px rgba(28, 52, 84, 0.4);
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+header h1 + p {
+  margin: 0 0 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+address {
+  font-style: normal;
+}
+
+address p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+address a {
+  color: var(--navy-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-soft);
+}
+
+address a:hover,
+address a:focus-visible {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+header + hr {
+  height: 4px;
+  margin: 30px 0 42px;
+  border: none;
+  border-top: 2px solid var(--navy);
+  border-bottom: 1px solid var(--gold);
+  padding: 0;
+}
+
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 38px 0;
+}
+
+section h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0 0 22px;
+}
+
+section h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--gold-soft);
+}
+
+section p {
+  margin: 0 0 4px;
+}
+
+
+article {
+  border-left: 2px solid var(--gold-soft);
+  padding-left: 18px;
+  margin-bottom: 26px;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+article td {
+  padding: 0;
+  vertical-align: top;
+}
+
+article td:first-child {
+  padding-right: 20px;
+  width: 90px;
+}
+
+article img {
+  display: block;
+  width: 78px;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 3px;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+article em,
+p em {
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+
+ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+section > ul {
+  margin-top: 4px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+li strong {
+  color: var(--navy);
+}
+
+h3 + ul {
+  margin-bottom: 22px;
+}
+
+h3:last-of-type + ul {
+  margin-bottom: 0;
+}
+
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+
+@media (max-width: 640px) {
+  body {
+    margin: 0;
+    max-width: 100%;
+    padding: 40px 24px;
+    border: none;
+    box-shadow: none;
+  }
+
+  header table,
+  header tr,
+  header td,
+  article table,
+  article tr,
+  article td {
+    display: block;
+    width: 100%;
+  }
+
+  header td:first-child {
+    padding-right: 0;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  header img {
+    margin: 0 auto;
+  }
+
+  h1,
+  header h1 + p,
+  address {
+    text-align: center;
+  }
+
+  article td:first-child {
+    margin-bottom: 12px;
+  }
+
+  section h2 {
+    font-size: 1.1rem;
+  }
+}
